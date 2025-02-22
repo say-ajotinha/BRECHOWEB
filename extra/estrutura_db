@@ -1,0 +1,24 @@
+└── Banco de Dados: brecho_dados
+    ├── Tabelas:
+    │   ├── usuarios
+    │   │   ├── id (INT, PRIMARY KEY, AUTO_INCREMENT)
+    │   │   ├── nome (VARCHAR 100)
+    │   │   ├── email (VARCHAR 100, UNIQUE)
+    │   │   ├── senha (VARCHAR 255)
+    │   │   ├── data_cadastro (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
+    │   ├── produtos
+    │   │   ├── id (INT, PRIMARY KEY, AUTO_INCREMENT)
+    │   │   ├── nome (VARCHAR 100)
+    │   │   ├── descricao (TEXT)
+    │   │   ├── preco (DECIMAL 10,2)
+    │   │   ├── imagem (VARCHAR 255)
+    │   │   ├── id_usuario (INT, FOREIGN KEY -> usuarios.id)
+    │   │   ├── data_postagem (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
+    │   │   ├── categoria (ENUM 'CAMISA','CALÇA','SAPATO','ACESSÓRIO','OUTROS')
+    │   │   ├── genero (ENUM 'Masculino','Feminino')
+    │   ├── vendas
+    │   │   ├── id (INT, PRIMARY KEY, AUTO_INCREMENT)
+    │   │   ├── id_usuario (INT, FOREIGN KEY -> usuarios.id)
+    │   │   ├── id_produto (INT, FOREIGN KEY -> produtos.id)
+    │   │   ├── data_venda (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
+    │   │   ├── status (ENUM 'pendente','aprovado','enviado','entregue')

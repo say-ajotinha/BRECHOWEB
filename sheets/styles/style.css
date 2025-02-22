@@ -1,0 +1,360 @@
+/* Estilo atualizado seguindo a referência do Enjoei */
+
+/* Gradiente de fundo estiloso */
+html, body {
+    background-attachment: fixed;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(34, 34, 34);
+    background: linear-gradient(135deg, #f3e0c2, rgb(250, 224, 200));
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/* Header estilizado */
+.header {
+    background-color:rgb(253, 207, 169);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #411a00; /* Detalhe sutil */
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-links a {
+    color:#4c2200;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Efeito de sublinhado animado */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #a05418;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover {
+    color: #251100;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Remove a animação de sublinhado do botão "Quero vender" */
+.nav-links .btn-vender::after {
+    content: none;
+}
+
+
+/* Botão "Quero vender" com destaque */
+.btn-vender {
+    background-color: #4c2200;
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #a05418;
+}
+
+.btn-vender:hover {
+    background: linear-gradient(5deg, #493d34, #f0c099);
+    color: #4c2200 !important;
+    box-shadow: 0 0 8px rgb(61, 26, 15);
+}
+
+/* Seções organizadas */
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Grid de produtos */
+.produtos-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.produto {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer menor e discreto */
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    color: #4c2200;
+    border-top: 1px solid #1b0c00; /* Linha mais sutil */
+    text-align: center;
+    font-size: 14px; /* Fonte menor */
+    padding: 5px 10px; /* Redução do padding */
+    opacity: 0.9;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 3px 0; /* Redução do espaçamento entre parágrafos */
+    font-size: 12px; /* Texto ainda mais discreto */
+}
+
+footer a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #4c2200;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização da barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 530px; /* Ajuste conforme necessário */
+    background: #ffffff;
+    padding: 5px; /* Pequeno padding para espaçamento interno */
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden; /* Mantém o arredondamento */
+}
+
+/* Formulário para garantir alinhamento correto */
+.search-bar form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Campo de entrada */
+.search-bar input {
+    flex: 1; /* Faz o input ocupar todo o espaço disponível */
+    border: none;
+    outline: none;
+    padding: 12px 15px; /* Ajusta altura e espaçamento */
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+    border-radius: 30px; /* Mantém o arredondamento */
+}
+
+/* Botão de busca */
+.search-bar button {
+    background: #4c2200; /* Cor de destaque para o botão */
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff; /* Cor do ícone */
+    padding: 10px 15px;
+    border-radius: 50%; /* Deixa o botão circular */
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar button:hover {
+    background: #b65200; /* Cor mais escura ao passar o mouse */
+}
+
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4c2200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                 0 0 10px #a05418;
+    position: relative;
+    transition: text-shadow 0.3s ease-in-out;
+}
+.titles {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4c2200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                 0 0 10px rgba(124, 94, 118, 0.5);
+    position: relative;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.titles-aj {
+    font-family: "Playfair Display", serif;
+    font-size: 18px; /* Aumentei o tamanho para dar mais destaque */
+    font-weight: normal; /* Menos agressivo, mantendo elegância */
+    color: #333333; /* Cor mais suave, sem ser totalmente preta */
+    text-transform: uppercase; /* Mantém a capitalização */
+    letter-spacing: 1.5px; /* Menos espaçamento para um visual mais refinado */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 15px; /* Distância entre o título e os botões */
+    transition: all 0.3s ease-in-out; /* Suaviza qualquer transição */
+}
+
+.titles-aj:hover {
+    color: #ff7f50; /* Cor salmão suave ao passar o mouse, como destaque */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra mais discreta para destaque */
+}
+
+
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                     0 0 10px rgba(124, 94, 118, 0.5);
+    }
+    50% {
+        text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3), 
+                     0 0 15px rgba(124, 94, 118, 0.7);
+    }
+    100% {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                     0 0 10px rgba(124, 94, 118, 0.5);
+    }
+}
+
+.logo:hover {
+    animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #a05418;
+    outline: none;
+}
+
+.form-actions {
+    margin-top: 10px;
+}
+
+.form-actions button {
+    background-color: #4c2200;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+.form-actions button:hover {
+    background-color: #a05418;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #4c2200;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+

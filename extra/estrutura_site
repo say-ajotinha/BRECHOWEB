@@ -1,0 +1,33 @@
+BRECHOWEB/
+│
+├── Categorias/
+│   ├── fem.php
+│   ├── masc.php
+│
+├── Config/
+│   ├── config.php
+│
+├── extra/
+│   ├── estrutura_db
+│   ├── estrutura_site
+│
+├── PHPMailer/
+│
+├── sheets/
+│   ├── fonts/
+│   ├── img/
+│   ├── styles/
+│
+├── UserCentral/
+│   ├── cadastro.php
+│   ├── login.php
+│   ├── logout.php
+│   ├── processar_redefinicao.php
+│   ├── recuperar_senha.php
+│   ├── redefinir_senha.php
+│
+├── Vendas/
+│   ├── adicionar_venda.php
+│   ├── dashboard.php
+│
+├── index.php
